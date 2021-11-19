@@ -456,6 +456,10 @@
                 /** Tu marca de agua debe estar detrás de cada contenido **/
                 z-index:  -1000;
             }
+        
+            .fon{
+                height: 1000px; 
+            }
 
         
       
@@ -497,7 +501,7 @@
     </footer>
 
     <!-- Wrap the content of your PDF inside a main tag -->
-    <div class="fon">
+    <div class="">
           <div>
             <p class="fecha">Lima, 31 de agosto de 2021</p>
           </div>
@@ -537,7 +541,7 @@
         <p>Thank you for your request and interest in VEGA products and solutions. Based upon the information
           provided, we are pleased to present the following offer. </p>
 
-        <p>The total for this quotation, not including shipping and handling, is USD . The lead time for the
+        <p>The total for this quotation, not including shipping and handling, is USD <span style="color: red">{{ $cotizacion['SeccionCotizacion']['GranTotal'] ?? '' }}</span>. The lead time for the
           equipment is eight (8) weeks after receipt of order. </p>
 
         <p>Please review this offer and contact us if you have any questions or concerns. If you would like to submit
@@ -547,6 +551,8 @@
 
         <p>Fiorella Zacarias <br>
           Jefe de Ventas Internas</p>
+
+          <p>@php print_r($cotizacion); @endphp</p>
       </div>
 
       <div style="page-break-after: always;"></div>
