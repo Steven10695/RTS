@@ -553,6 +553,7 @@
           Jefe de Ventas Internas</p>
 
           <p>@php print_r($cotizacion); @endphp</p>
+          
       </div>
 
       <div style="page-break-after: always;"></div>
